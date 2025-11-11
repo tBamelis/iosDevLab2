@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "airplane-symbol-png-buy-this-icon-for--0-98-19.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "airplane-symbol-png-buy-this-icon-for--0-98-19 1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "airplane-symbol-png-buy-this-icon-for--0-98-19 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

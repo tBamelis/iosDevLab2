@@ -7,31 +7,52 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-        
+struct ContentView: View
+{
+    let departureFlightInfo =
+    FlightInfo(
+        departureCityCode: "BRU",
+        departureCity: "Brussels",
+        departureTime: "8:15",
+        arrivalCityCode: "BCN",
+        arrivalCity: "Barcelona",
+        arrivalTime: "11:15",
+        flight: "SN23A",
+        gate: "B23",
+        seat: "27A",
+        passenger: "Dirk Hostens",
+        ticket: "Business",
+        date: "27/08/2024")
+    
+    let arrivalFlightInfo =
+    FlightInfo(
+        departureCityCode: "BCN",
+        departureCity: "Barcelona",
+        departureTime: "13:05",
+        arrivalCityCode: "BRU",
+        arrivalCity: "Brussels",
+        arrivalTime: "15:15",
+        flight: "SN205",
+        gate: "XD-30",
+        seat: "17C",
+        passenger: "Dirk Hostens",
+        ticket: "Business",
+        date: "1/09/2024")
+  
+    
+
+    var body: some View
+    {
+        TabView
+        {
+            Tab("departure",systemImage: "airplande.departure"){departureView(flightInfo: departureFlightInfo)}
+            Tab("Info",systemImage: "magnifyingglass"){}
+            Tab("Arrivle",systemImage:"airplane.arrival"){ArrivleView(flightInfo: arrivalFlightInfo)}
             
-            Image("Image").resizable()
-
-
-
-            
-            Text("Barcelona").bold()
-            Text("Barcelona is de op een na grootste stad van Spanje, na de hoofdstad Madrid. De stad is de hoofdstad van de autonome regio Catalonië en van de provincie Barcelona. Barcelona telt 1.636.732 inwoners (2021)[1] en heeft een oppervlakte van 101,4 km². In de metropolitane regio wonen circa 6,8 miljoen mensen (2017). De stad ligt aan de Middellandse Zee, aan de Costa del Maresme, tussen de Costa Brava in het noorden en de Costa del Garraf in het zuiden. Barcelona beschikt over een belangrijke zee- en handelshaven en ligt op ongeveer 160 kilometer van de Pyreneeën. Barcelona is een belangrijk cultureel en academisch centrum. De Universiteit van Barcelona werd opgericht in 1450 en de Universiteit Pompeu Fabra in 1990. De stad organiseerde meerdere internationale evenementen, waaronder de Wereldtentoonstellingen van 1888 en 1929, de Olympische Zomerspelen van 1992 en het Fòrum van 2004. Een groot deel van de stad, het district Eixample, werd in de 19e eeuw ontworpen met een kenmerkend rasterpatroon. Inwoners noemen de stad vaak 'Barna', terwijl 'Barça' verwijst naar de voetbalclub FC Barcelona.")
-          
-
-
-
-
-
-            
-        
-            
-
         }
-        .padding()
+            
     }
+    
 }
 
 #Preview {
